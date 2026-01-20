@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 全域 */
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .color{
+    width: 70%;
+    height: 20rem;
+    background-color: aqua;
+  }
+  /*  平板 */
+  @media screen and (min-width: 481px) and (max-width:1023px){
+    .color{
+      width: 60%;
+      height: 10rem;
+      background-color: brown;
+    }
+  }
+  /* 手機 */
+  @media screen and (max-width: 480px){
+    .color{
+      width: 80%;
+      height: 10rem;
+      background-color: pink;
+    }
+    
+  }
+</style>
+<body>
+  <div class="color"></div>
+</body>
+</html>

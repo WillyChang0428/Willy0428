@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Kaku+Gothic+New&display=swap');
+
+    body{
+      display: flex;
+      justify-content: center;
+    }
+    .container{
+      min-width: 20rem;
+      height: 28rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .card{
+      width: 20rem;
+      border: lightgray solid 1px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 2rem;
+    }
+    .img{
+      width: 20rem;
+      height: 14rem;
+      background: url(images.png) no-repeat;
+    }
+    #img1{
+      background-size: 307%;
+    }
+
+    #img2{
+      background-size: 307%;
+    }
+
+    #img3{
+      background-size: 307%;
+      background-position: right top;
+    }
+
+    .introduction{
+      display: flex;
+      flex-direction: column;
+      padding-right: 2rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .title{
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .arrowbtn{
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: absolute;
+      right: 0.6rem;
+      top: 0.6rem;
+      cursor: pointer;
+    }
+    .arrowbtn:hover{
+      background-color: darkblue;
+    }
+    .content{
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    .fontgray{
+      color: gray;
+      font-size: 0.7rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="img" id="img1">
+      </div>
+      <div class="introduction">
+          <div class="title">
+            <p>充電式室內・屋外兼用追尾墨出し器<br>SK314GDN</p>
+            <div class="arrowbtn"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+          <div class="content">
+            Typ.5Ah ※バッテリ対応 長時間使える。超高輝度CXTレーザー、おおがね・通り芯・ろくタイプ。
+            <span class="fontgray">※記載の容量は標準的な数値です。</span>
+          </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img" id="img2">
+      </div>
+      <div class="introduction">
+          <div class="title">
+            <p>充電式室內・屋外兼用追尾墨出し器<br>SK507GDN</p>
+              <div class="arrowbtn"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+          <div class="content">
+            Typ.5Ah ※バッテリ対応 長時間使える。超高輝度CXTレーザー、フルラインタイプ。<span class="fontgray">※記載の容量は標準的な数値です。</span>
+          </div>
+        </div>
+    </div>
+    <div class="card">
+      <div class="img" id="img3">
+      </div>
+      <div class="introduction">
+          <div class="title">
+            <p>充電式パワーカッタ<br>CE003G</p>
+              <div class="arrowbtn"><i class="fa-solid fa-arrow-right"></i>
+              </div>
+          </div>
+          <div class="content">
+            軽量・コンパクト。切断スピード約45%アップ※で高速＆パワフル切断。<span class="fontgray">※当社18V×2機比。コンクリート重負荷切断/深さ50mm時。</span>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

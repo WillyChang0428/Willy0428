@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .skill-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-list li{
+    display: flex;
+    margin: 5px;
+  }
+  .skill-name{
+    width: 80px;
+  }
+  .skill-bar{
+    width: 250px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: -1px 1px inset rgb(63, 63, 63);
+  }
+
+  .skill-level{
+    width: 90%;
+    height: 98%;
+    background-color: rebeccapurple;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: ;
+  }
+@keyframes{
+  .level-run{
+    from{
+      
+    }
+  }
+
+}
+
+
+</style>
+
+<body>
+  <div class="skill-box">
+    <h3>技能</h3>
+    <ul class="skill-list">
+      <li><div class="skill-name">HTML</div>
+        <div class="skill-bar">
+          <div class="skill-level">90%</div>
+        </div>
+      </li>
+      <li><div class="skill-name">CSS</div>
+        <div class="skill-bar">
+          <div class="skill-level">80%</div>
+        </div>
+      </li>
+      <li><div class="skill-name">JavaScript</div>
+        <div class="skill-bar">
+          <div class="skill-level">70%</div>
+        </div>
+      </li>
+      <li><div class="skill-name">PHP</div>
+        <div class="skill-bar">
+          <div class="skill-level">60%</div>
+        </div>
+      </li>
+      <li><div class="skill-name">SQL</div>
+        <div class="skill-bar">
+          <div class="skill-level">50%</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

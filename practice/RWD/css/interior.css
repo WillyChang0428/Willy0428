@@ -1,0 +1,236 @@
+/* 字體 */
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=National+Park:wght@200..800&display=swap');
+
+/* Reset */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: 0;
+    color: #333;
+  }
+
+  button{
+    border: none;
+    cursor: pointer;
+  }
+
+  i{
+    color: #CDA274;
+  }
+
+  /* Body */
+    body{
+    background: url(../images/bg.jpg) repeat-y;
+    background-size: 100% auto;
+  }
+
+  p{
+    font-family: "National Park", sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+/* 全域(手機) */
+
+/* Banner & 常用 */
+  #Banner{
+    width: 100%;
+    /* height: 400px; */
+    aspect-ratio: 4/3;
+    background: url(../images/phone/Banner.png) no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 4.375rem;
+    object-fit: fill;
+  }
+
+  .container{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 20px;
+  }
+  .hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .btn{
+    width: fit-content;
+    background-color: #292F36;
+    color: white;
+    padding: 16px 38px;
+    border-radius: .625rem;
+    font-family: "National Park";
+    font-weight: 800;
+  }
+  .btn:hover{
+    background-color: #545454;
+  }
+  .btn:active{
+    opacity: 0.5;
+  }
+  .btn i{
+    margin-left: 5px;
+  }
+  /* work */
+  #work{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.1875rem auto ;
+    gap: 1.875rem;
+  }
+
+  .work-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .9375rem;
+  }
+
+  .work-box h3{
+    font-size: 24px;
+  }
+  
+  .work-box p{
+    text-align: center;
+  }
+
+  .work-box > .btn{
+    background-color: rgba(255, 255, 255, 0);
+    color: #5d6164;
+  }
+
+
+
+  /* About */
+  #About{
+    display: flex;
+    justify-content: center;
+  }
+  #About .container{
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .intro-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    order: 2;
+  }
+  .sub-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #sub-title, #sub-content{
+    text-align: center;
+  }
+
+
+  .phone{
+    display: flex;
+    align-items: center;
+    margin: auto ;
+    gap: 10px;
+  }
+  .phone-text{
+    display: flex;
+    flex-direction: column;
+  }
+  .phone-number{
+    font-weight: 800;
+    font-size: larger;
+    color: #545454;
+  }
+  .phone-icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8ded2;
+  }
+  .phone-icon i{
+    font-size: 40px;
+  }
+
+
+  .intro-img{
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+  .intro-img  img{
+    width: 100%;
+    border-radius: 0 6.25rem 0 6.25rem;
+  }
+
+/* 平板 */
+@media screen and (min-width:481px) {
+  #Banner{
+    width: 100%;
+    height: 400px;
+    background: url(../images/tablet/Banner.jpg) no-repeat;
+    background-size: 100%;
+  }
+#work{
+    flex-direction: row;
+  }
+#work h3{
+  text-align: center;
+
+}
+
+#About .container{
+  flex-direction: row;
+}
+
+.intro-box{
+  order: 1;
+}
+
+.intro-img{
+  order: 2;
+}
+
+/* .intro-img .img{
+  width: 500px ;
+  height: 500px;
+} */
+
+}
+
+/* 電腦 */
+@media screen and (min-width:1025px)  {
+  #Banner{
+    width: 100%;
+    height: 30rem;
+    background: url(../images/Banner.jpg) no-repeat;
+    background-size: 100%;
+    /* background-position: bottom center; */
+  }
+
+
+
+
+
+}

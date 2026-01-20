@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex practice</title>
+  <style>
+    .container{
+      width: 30rem;
+      height: 30rem;
+      display: flex;
+      background-color: wheat;
+      justify-content: space-between;
+      align-items:stretch ;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    
+    .item{
+      /* width: 5rem; */
+      height: 3rem;
+      color:white;
+      background-color: brown;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+
+  </div>
+</body>
+</html>

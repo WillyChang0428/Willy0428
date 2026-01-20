@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽元素練習</title>
+  <style>
+    .box::before{
+      content: '';
+      width: 100px;
+      height: 100px;
+      display: flex;
+      background-color: aqua;
+      /* padding: 20px; */
+      /* margin-bottom: 20px; */
+    }
+    .box::after{
+      content: '';
+      width: 100px;
+      height: 100px;
+      display: flex;
+      background-color: brown;
+      /* padding: 20px; */
+      /* margin-top: 20px; */
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      display: flex;
+      position: absolute;
+      top: 10vh;
+    }
+
+
+
+  </style>
+</head>
+<body>
+    <p>這裡有一行</p>
+
+    <div class="box"></div>
+</body>
+</html>

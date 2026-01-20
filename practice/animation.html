@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container{
+    display: flex;
+    justify-content: space-around;
+
+  }
+  
+  .box{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    margin: 50px;
+    animation: slide ease-in 2s;
+  }
+
+  @keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+
+    to{
+      transform: translateX(300px);
+    }
+  }
+
+  .slide{
+    animation-name: slide;
+  }
+
+
+
+</style>
+<body>
+  <div class="container">
+    <div class="box slide"></div>
+    <div class="box fade"></div>
+    <div class="box spin"></div>
+  </div>
+</body>
+</html>

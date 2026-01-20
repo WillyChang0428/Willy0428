@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>區塊置中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 80vw;
+            height: 80vh;
+            background:url(imgs/284792.png) no-repeat, url(imgs/star.jpeg) repeat;
+            background-position: center;
+            position: relative;
+            top: calc((100vh - 80vh)/2);
+            left: calc((100vw - 80vw)/2);
+        }
+
+        #box2{
+            width: 20vw;
+            height: 20vh;
+            background-color: red;
+            position: relative;
+            top: calc((80vh - 20vh)/2);
+            left: calc((80vw - 20vw)/2);
+            opacity: 0.5;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>練習置中</h2>
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+</body>
+
+</html>

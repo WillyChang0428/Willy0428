@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 把a做成區塊元素 */
+    a{
+      width: 30vw;
+      height: 5vh;
+      display: block;
+      border: solid black 1px;
+      text-align: center;
+      line-height: 5vh; 
+      /* line-height和height一樣就可以垂直置中 */
+      margin-bottom: 5vh;
+      text-decoration: none;
+    }
+    a.box1{
+      position: absolute;
+      top:8vh;
+      left: 10vw;
+      z-index: 1;
+      background-color: lightblue;
+    }
+    a.box2{
+      position: absolute;
+      top:13vh;
+      left: 10vw;
+      z-index: 2;
+      background-color: lightsalmon;
+    }
+    a.box3{
+      position: absolute;
+      top:16vh;
+      left: 15vw;
+      background-color: lightpink;
+      z-index: 3;
+    }
+    .newbox{
+      width: 50vw;
+      height: 20vh;
+      position: absolute;
+      background-color: #a50606;
+      top: 50vw;
+      left: 30vh;
+    }
+    /* 父容器要設position，子元素的position才會跟隨 */
+  </style>
+</head>
+<body>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+    <li>item5</li>
+  </ul>
+  <div class="newbox">
+  <a href="" class="box1">youtube</a>
+  </div>
+  <a href="" class="box2">facebook</a>
+  <a href="" class="box3">line</a>
+
+</body>
+</html>

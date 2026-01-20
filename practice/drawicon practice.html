@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽元素icon</title>
+  <style>
+    body{
+      font-size: 16px;
+    }
+    .menu{
+      position: relative;
+      background-color: brown;
+      width: 3em;
+      height: 3em;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 5em;
+      border: 1em solid lightsalmon;
+      cursor: pointer;
+
+    }
+    .menu::after{
+      content: '';
+      position: absolute;
+      width: 1em;
+      height: 0.2em;
+      top: 1em;
+      left: 1em;
+      border-top: 0.6em double #fff;
+      border-bottom: 0.2em solid #fff;
+    }
+
+    p::first-letter{
+      font-size: 2em;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="menu"></div>
+</body>
+</html>
