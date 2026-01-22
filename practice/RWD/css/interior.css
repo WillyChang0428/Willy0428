@@ -40,16 +40,14 @@
 /* Banner & 常用 */
   #Banner{
     width: 100%;
-    /* height: 400px; */
     aspect-ratio: 4/3;
     background: url(../images/phone/Banner.png) no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom center;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom-left-radius: 4.375rem;
-    object-fit: fill;
   }
 
   .container{
@@ -101,6 +99,7 @@
 
   .work-box h3{
     font-size: 24px;
+    text-align: center;
   }
   
   .work-box p{
@@ -143,12 +142,11 @@
   #sub-title, #sub-content{
     text-align: center;
   }
-
+  
 
   .phone{
     display: flex;
     align-items: center;
-    margin: auto ;
     gap: 10px;
   }
   .phone-text{
@@ -173,7 +171,6 @@
     font-size: 40px;
   }
 
-
   .intro-img{
     display: flex;
     justify-content: center;
@@ -184,53 +181,92 @@
     border-radius: 0 6.25rem 0 6.25rem;
   }
 
-/* 平板 */
+/* 平板 (481px ~ 1024px) */
 @media screen and (min-width:481px) {
+  
   #Banner{
     width: 100%;
     height: 400px;
     background: url(../images/tablet/Banner.jpg) no-repeat;
-    background-size: 100%;
+    background-size: cover; 
+    background-position: center;
   }
-#work{
+
+  #work{
     flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
   }
-#work h3{
-  text-align: center;
 
+  .work-box {
+    flex: 1; 
+  }
+
+  #About .container{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .intro-img {
+    width: 50%;
+  }
+  .intro-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .intro-box{
+    width: 50%; 
+    order: 1;  
+    align-items: flex-start;
+  }
+  
+  .intro-img{
+    order: 2;  
+  }
+
+  
+  #sub-title, #sub-content {
+    text-align: left;
+  }
 }
 
-#About .container{
-  flex-direction: row;
-}
-
-.intro-box{
-  order: 1;
-}
-
-.intro-img{
-  order: 2;
-}
-
-/* .intro-img .img{
+.intro-img .img{
   width: 500px ;
   height: 500px;
-} */
-
 }
 
-/* 電腦 */
+
+/* 電腦 (1025px 以上) */
 @media screen and (min-width:1025px)  {
+  
   #Banner{
-    width: 100%;
-    height: 30rem;
+    height: 600px; 
     background: url(../images/Banner.jpg) no-repeat;
-    background-size: 100%;
-    /* background-position: bottom center; */
+    background-size: cover;
+    background-position: center;
   }
 
 
+  #work, 
+  #About .container,
+  #Banner .container {
+    
+    max-width: 1200px;
 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
 
-
+  #Banner .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
