@@ -7,22 +7,112 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(237, 237, 237);
-    margin: 0px;
-    font-size: 14px;
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
+
+
+h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    text-shadow: none;
+}
+
+.container{
+    padding: 25px;
+    box-sizing: content-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    background-color: rgb(254, 253, 248);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 背景形狀動畫 */
+.circle1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    /* top: -20%; */
+    left: 20%;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    background: rgba(52, 152, 219, 0.1);
+    z-index: -1;
+    animation: move 15s ease-in-out infinite alternate;
+}
+
+.circle2 {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    opacity: 0.2;
+    animation: move2 12s ease-in infinite;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 80%;
+    right: 20%;
+    border: 5px solid #8fdbed91;
+    animation: spin 20s linear infinite;
+    background: transparent;
+    z-index: -1;
+}
+
+
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, 50px); }
+}
+
+@keyframes move2 {
+    0% { transform: translateY(580px); }
+    50% { transform: translateY(680px); }
+    100% { transform: translateY(580px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* 背景形狀動畫結束 */
+
+/* header */
 .header{
-    height: 50px;
+    width: 100%;
+    height: 3.125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    border-radius: 0 0 .9375rem .9375rem;
+    box-shadow: .125rem .125rem .625rem gray;
+    position: fixed;
+
 }
 .logo{
     width: 100px;
     height: 50px;
-    background-color: brown;
+    /* background-color: brown; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +121,7 @@ body {
 .logo>a{
     width: 100%;
     text-decoration: none;
-    color: white;
+    /* color: white; */
     font-family: "Mukta", sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -42,13 +132,14 @@ body {
     height: 100%;
 }
 .menu-icon{
-    width: 100px;
+    width: 50px;
     height: 50px;
-    background-color: salmon;
+    /* background-color: salmon; */
     display: none;
     justify-content: center;
     align-items: center;
 }
+
 .navbar>ul{
     width: 100%;
     height: 100%;
@@ -64,7 +155,7 @@ body {
 .navbar>ul>li{
     width: 100%;
     height: 100%;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     display: flex;
     padding: 10px;
     text-align: center;
@@ -82,130 +173,370 @@ body {
     font-size: 16px;
 }
 
+/* 這裡開始是About */
 #About{
-  display: flex;
-  justify-content: center;
-  background-color: lightpink;
-
-}
-
-.container{
-  padding: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3.125rem;
 
 }
 
 #About > .container{
-  width: 80%;
-  max-width: 1140px;
-  height: 30rem;
-  /* background-color: lightpink; */
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+    width: 100vw;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.my-photo, .intro{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  background-color: lightgreen;
+.my-photo{
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: lightgreen; */
+    order: 1;
 }
 
-#Skill{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(61, 242, 248);
-
+.my-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-#Skill > .container{
-  width: 80%;
-  /* max-width: 1140px; */
-  height: 30rem;
-  /* background-color: rgb(243, 214, 214); */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.intro{
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: lightgreen; */
+    /* border: solid 1px gray; */
+    padding: 20px;
+    order: 2;
 }
+
+#value{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#value > .container{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 .skill-list{
-  width: 25%;
-  height: auto;
-  background-color: blueviolet;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+
+.skill-list li{
+    display: flex;
+    margin: 5px;
+}
+.skill-name{
+    width: 80px;
+}
+.skill-bar{
+    width: 250px;
+    height: 20px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: -1px 1px inset rgb(63, 63, 63);
 }
 
-#gallery{
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f7c7c7;
+.skill-HTML { 
+    width: 95%; 
+    background: linear-gradient(to right, #3498db, #2980b9); 
+    animation: fillBar 1s ease-out; 
+    border-radius: 20px;
+    text-align: center;
+}
+.skill-CSS { 
+    width: 85%; 
+    background: linear-gradient(to right, #00b4db, #0083b0); 
+    animation: fillBar 1s ease-out; 
+    border-radius: 20px;
+    text-align: center;
+}
+.skill-JS { 
+    width: 80%; 
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    animation: fillBar 1s ease-out; 
+    border-radius: 20px;
+    text-align: center;
+}
+.skill-PHP { 
+    width: 75%; 
+    background: linear-gradient(to right, #f2994a, #f2c94c); 
+    animation: fillBar 1s ease-out; 
+    border-radius: 20px;
+    text-align: center;
+}
+.skill-SQL { 
+    width: 90%; 
+    background: linear-gradient(to right, #4b6cb7, #182848); 
+    animation: fillBar 1s ease-out; 
+    border-radius: 20px;
+    text-align: center;
 }
 
-#gallery >ul{
-  list-style: none;
-  padding: 0; 
-  width: 80%;
-  height: 30%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+
+@keyframes fillBar {
+    from { width: 0; }
+}
+.experience{
+    width:50%;
+    /* height: 30rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
-.photos{
-  width: 30%;
-  min-width: 200px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aquamarine;
+/* 1. 調整經歷區塊的容器 */
+.experience-content {
+    display: flex;
+    flex-direction: row; /* 桌機版橫向排列 */
+    justify-content: space-between;
+    align-items: flex-start; /* 讓內容對齊頂部 */
+    gap: 40px; 
 }
 
+/* 2. 請填寫以下屬性，讓兩塊內容平分空間 */
+.education, .job {
+    /* 提示：設定寬度為 48%，確保中間有間隙 */
+    width: 48%; 
+}
 
+.job h3, .education h3 {
+    margin-top: 0;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
 
-/* 手機 */
-@media screen and (max-width: 500px) {
-    .header{
-        height: fit-content;
-        flex-wrap: wrap;
-        align-items: stretch;
-        /* justify-content: stretch; */
-    }
+.profile p {
+    /* 提示：設定行高(line-height)為 1.6，增加易讀性 */
+    line-height: 1.6;
+    color: #555;
+}
 
-    .navbar{
+/* gallery */
+  #gallery > .container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .photo-frame{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+  .photo-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .photo-frame:nth-child(1){
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .photo-frame:nth-child(3){
+    grid-area: 1 / 4 / 2 / 6;
+  }
+  .photo-frame:nth-child(5){
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .photo-frame:nth-child(7){
+    grid-area: 3 / 3 / 4 / 6;
+  }
+
+/* 平板 (481px ~ 1024px) */
+@media screen and (max-width:1024px) {
+  #About > .container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .my-photo, .intro {
+    width: 100%;
+    height: auto;
+  }
+
+  .my-photo{
+      order: 2;
+  }
+  .my-photo img{
       width: 100%;
-    }
-    .navbar > ul{
-      flex-wrap: wrap;
-    }
+      border-radius: 0;
+  }
 
-    .navbar >ul >li{
-      border-bottom: 1px solid gray;
+  .intro{
+    height: auto;
+    justify-content: left;
+    order: 1;
+  }
+
+  #value > .container{
+    width: 100%;
+    gap: 10px;
+  }
+
+  .skill, .experience{
+    width: 100%;
+    height: auto;
+  }
+}
+/* 手機 */
+@media screen and (max-width: 480px) {
+  .circle1 {
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 50%;
     }
-    .navbar > ul > li>a{
-      color: white;
-    }
-    .container{
+  .header{
+      height: fit-content;
+      flex-wrap: wrap;
+      align-items: stretch;
+      box-sizing: border-box;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+  }
+
+  .navbar{
+      width: 100%;
+  }
+  .navbar > ul{
+      flex-wrap: wrap;
+  }
+
+  .navbar >ul >li{
+      border-bottom: .0313rem solid gray;
+  }
+  .navbar >ul >li:nth-child(4){
+      border-bottom: none;
+  }
+
+  .navbar > ul > li > a{
+      /* color: white; */
+  }
+  .container{
+      width: 100vw;
+      padding: 10px 0 0 0;
       flex-direction: column;
       align-items: center;
-    }
-    .menu-icon{
-        display: block;
+  }
+  .menu-icon{
+      display: flex;
+  }
+
+
+  #About{
+    padding-top: 14.8438rem;
+  }
+  #About .container{
+    gap: 5px;
+
+  }
+
+  .my-photo{
+      order: 2;
+  }
+  .my-photo img{
+      width: 100%;
+      border-radius: 0;
+  }
+  .intro{
+    height: auto;
+    justify-content: left;
+    order: 1;
+  }
+
+  #value .container{
+    width: 100%;
+    justify-content: left;
+    flex-direction: column;
+  }
+
+  .skill, .experience{
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .skill-list li {
+        width: 100%;
+        flex-direction: column; /* 提示：考慮讓文字在進度條上方 */
+        align-items: flex-start;
+        margin-bottom: 15px;
     }
 
-    .skill-list{
-      width: 80%;
-      height: 33.33%;
-      background-color: blueviolet;
+    .skill-name {
+        width: 100%;
+        margin-bottom: 5px;
     }
-    .photos{
-      width: 80%;
-      min-width: none;
-}
+
+    /* 2. 關鍵修正：將固定 px 改為彈性的百分比 */
+    .skill-bar {
+        width: 100%; /* 讓它隨螢幕寬度自動延伸 */
+        margin-left: 0;   /* 取消桌機版的左邊距 */
+    }
+
+    /* 3. 確保動畫容器不會溢出 */
+    .skill {
+        width: 100%;
+        padding: 0 20px; /* 給左右留點呼吸空間 */
+        overflow: hidden;
+    }
+
+  .experience-content {
+        flex-direction: column; 
+    }
+
+  .education, .job {
+      width: 100%; 
+  }
+
+  #gallery > .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .photo-frame:nth-child(1),
+  .photo-frame:nth-child(3),
+  .photo-frame:nth-child(5),
+  .photo-frame:nth-child(7) {
+    grid-area: auto;
+  }
+
 }

@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWD練習檔</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
+    <div class="shape-bg circle1"></div>
+    <div class="shape-bg circle2"></div>
+    <div class="shape-bg shape"></div>
     <!-- header start -->
     <header class="header">
         <div class="logo"><a href="">LOGO</a></div>
-        <div class="menu-icon">Menu</div>
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         <div class="navbar">
             <ul>
                 <li><a href="">About</a></li>
@@ -24,29 +28,89 @@
         </div>
     </header>
     <!-- header end -->
-     <!-- section start -->
+     <!-- section About start -->
       <section id="About">
         <div class="container">
-            <div class="my-photo"></div>
-            <div class="intro"></div>
+            <div class="my-photo"><img src="/practice/resume/imgs/Alex Chen.png" alt=""></div>
+            <div class="intro">
+                <h2>Alex Chen</h2>
+                <h1>Architecting Robust Systems,<br>Driving Data Value</h1>
+            </div>
         </div>
       </section>
-      <section id="Skill">
+     <!-- section Skill start -->
+      <section id="value">
             <div class="container">
-                <div class="skill-list"></div>
-                <div class="skill-list"></div>
-                <div class="skill-list"></div>
+                <div class="skill">
+                <h2>SKILL</h2>
+                <ul class="skill-list">
+                    <li><div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-HTML">95%</div>
+                        </div>
+                    </li>
+                    <li><div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-CSS">85%</div>
+                        </div>
+                    </li>
+                    <li><div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-JS">80%</div>
+                        </div>
+                    </li>
+                    <li><div class="skill-name">PHP</div>
+                        <div class="skill-bar">
+                            <div class="skill-PHP">75%</div>
+                        </div>
+                    </li>
+                    <li><div class="skill-name">SQL</div>
+                        <div class="skill-bar">
+                            <div class="skill-SQL">90%</div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-content">
+                        <div class="education">
+                            <h3>學歷</h3>
+                            <ul class="education-list">
+                                <li>
+                                    <h4>資訊工程碩士</h4>
+                                    <p class="education-meta">國立台灣大學 | 2015 - 2017</p>
+                                </li>
+                                <li>
+                                    <h4>資訊科學學士</h4>
+                                    <p class="education-meta">國立清華大學 | 2011 - 2015</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="job">
+                            <h3>後端工程師</h3>
+                            <div class="profile">
+                                <p>我是 Alex Chen，一名擁有 8 年經驗的後端工程師與系統架構師。我熱衷於解決複雜的數據流問題，並擅長使用 Python 與 Go 語言建構高併發、高可用的微服務架構。我相信程式碼不僅是功能的實現，更是邏輯與效率的完美結合。</p>
+                            </div>
+                        </div>
+                </div>
+                </div>
             </div>
         </section>
+     <!-- section gallery start -->
         <section id="gallery">
-            <ul class="phot-list">
-                <li class="photos">img1</li>
-                <li class="photos">text2</li>
-                <li class="photos">img3</li>
-                <li class="photos">text4</li>
-                <li class="photos">img5</li>
-                <li class="photos">text6</li>
-            </ul>
+            <div class="container">
+                <div class="photo-frame"><img src="./imgs/food1.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/food2.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/japan1.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/japan2.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/japan3.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/pancake.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/people1.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/people2.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/photo3.jpg" alt=""></div>
+                <div class="photo-frame"><img src="./imgs/strawberry.jpg" alt=""></div>
+            </div>
         </section>
 </body>
 
